@@ -1,0 +1,25 @@
+{
+  "name": "Game Boilerplate",
+  "servePort": 34873,
+  "tree": {
+    "$className": "DataModel",
+    "$ignoreUnknownInstances": true,
+    "ReplicatedStorage": {
+      "$ignoreUnknownInstances": true,
+      "$path": "src/shared",
+      "Packages": { "$path": "Packages" }
+    },
+    "ServerScriptService": {
+      "$ignoreUnknownInstances": true,
+      "$path": "src/server",
+      "ServerPackages": { "$path": "ServerPackages" }
+    },
+    "StarterPlayer": {
+      "$ignoreUnknownInstances": true,
+      "StarterPlayerScripts": {
+        "$ignoreUnknownInstances": true,
+        "$path": "src/client"
+      }
+    }
+  }
+}

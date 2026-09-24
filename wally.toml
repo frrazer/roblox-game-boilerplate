@@ -1,0 +1,17 @@
+[package]
+name = "novaware/game-boilerplate"
+version = "0.1.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+private = true
+
+[dependencies]
+Component = "sleitnick/component@2.4.8"
+Input = "sleitnick/input@3.0.0"
+Signal = "sleitnick/signal@2.0.3"
+TableUtil = "sleitnick/table-util@1.2.1"
+Trove = "sleitnick/trove@1.8.0"
+WaitFor = "sleitnick/wait-for@1.0.0"
+
+[server-dependencies]
+ProfileStore = "lm-loleris/profilestore@1.0.3"
