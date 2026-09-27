@@ -7,12 +7,15 @@
     "ReplicatedStorage": {
       "$ignoreUnknownInstances": true,
       "$path": "src/shared",
-      "Packages": { "$path": "Packages" }
+      "Packages": { "$path": "Packages" },
+      "ReplicaClient": { "$path": "vendor/Replica/src/ReplicatedStorage/ReplicaClient.luau" },
+      "ReplicaShared": { "$path": "vendor/Replica/src/ReplicatedStorage/ReplicaShared" }
     },
     "ServerScriptService": {
       "$ignoreUnknownInstances": true,
       "$path": "src/server",
-      "ServerPackages": { "$path": "ServerPackages" }
+      "ServerPackages": { "$path": "ServerPackages" },
+      "ReplicaServer": { "$path": "vendor/Replica/src/ServerScriptService/ReplicaServer.luau" }
     },
     "StarterPlayer": {
       "$ignoreUnknownInstances": true,

@@ -3,6 +3,8 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local packages = ReplicatedStorage:WaitForChild("Packages")
 packages:WaitForChild("Trove")
+ReplicatedStorage:WaitForChild("ReplicaShared")
+ReplicatedStorage:WaitForChild("ReplicaClient")
 
 local Lifecycle = require(ReplicatedStorage:WaitForChild("Lifecycle"))
 local controllers = require(script.Parent.Registry)

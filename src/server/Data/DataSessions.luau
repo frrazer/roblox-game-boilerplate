@@ -36,7 +36,6 @@ function DataSessions.Load(self: DataSessions, player: Player)
 		return
 	end
 	self._loading[player] = true
-	player:SetAttribute("DataLoaded", false)
 	local ok, result = pcall(function()
 		return self._store:StartSessionAsync(`Player_{player.UserId}`, {
 			Cancel = function()
@@ -76,7 +75,6 @@ function DataSessions.Load(self: DataSessions, player: Player)
 			return
 		end
 		self._profiles[player] = nil
-		player:SetAttribute("DataLoaded", false)
 		if not self._closed and self._isPresent(player) then
 			player:Kick("Your data session ended. Please rejoin.")
 		end
@@ -86,8 +84,6 @@ function DataSessions.Load(self: DataSessions, player: Player)
 		return
 	end
 	self._profiles[player] = profile
-	player:SetAttribute("Cash", profile.Data.Cash)
-	player:SetAttribute("DataLoaded", true)
 end
 
 function DataSessions.GetData(self: DataSessions, player: Player): PlayerData.Data?
@@ -109,7 +105,6 @@ end
 function DataSessions.Release(self: DataSessions, player: Player)
 	local profile = self._profiles[player]
 	self._profiles[player] = nil
-	player:SetAttribute("DataLoaded", false)
 	if profile then
 		profile:EndSession()
 	end
