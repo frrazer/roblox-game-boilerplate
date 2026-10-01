@@ -60,6 +60,7 @@ rojo serve default.project.json --address 127.0.0.1
 
 - Edit code on disk; Rojo syncs it. Code lives directly in the service roots, with no Client/Server/Shared wrapper folders.
 - Rojo owns mapped folders. Unknown children at service roots are preserved. Workspace, lighting, GUI and other art are edited and saved in Studio, not on disk.
+- Tag authoring-only content in Workspace (prefab libraries, reference models, anything the game reads from a copy elsewhere) `EditorOnly`. `Bootstrap.server.luau` moves tagged instances into `ServerStorage.EditorOnly` before any system starts, so they stay editable in Studio but are never replicated to players. Never tag something code reads from Workspace.
 - Server-only code (secrets, rules, data) belongs in `src/server`. Everything in `src/shared` is visible to clients.
 - Put tunable constants in `src/shared/Config` as frozen tables, or in server modules if clients must not see them.
 - Put pure logic in plain modules (such as `src/server/Data`) with no service dependencies.
