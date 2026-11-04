@@ -41,7 +41,6 @@ If `game.json` exists at the root, T3 Code created and manages this game. That t
 - `game.json` holds the game's Roblox `universeId`, `placeId` and `groupId`. `default.project.json` already lists the place in `servePlaceIds`.
 - T3 runs and restarts the Rojo server for you (on its own port, with Studio's Rojo plugin reconnecting by itself). Never run `rojo serve` yourself.
 - When you need Studio (UI, world building, Play tests), call the `t3_game_open_in_studio` tool, then work through the Roblox Studio MCP. If changes stop reaching Studio, call `t3_game_sync_status`.
-- T3 turns on Studio access to API services and Mesh/Image APIs when it creates the experience. Allow HTTP Requests is a place property it cannot set: the first time you open Studio, check `game:GetService("HttpService").HttpEnabled` through the Studio MCP and set it to `true` if it is off. Like UI and world edits, it is saved when the place is published.
 
 ### Manual setup
 
