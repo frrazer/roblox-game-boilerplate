@@ -33,6 +33,7 @@ Read this at the start of every session. The other guides in this folder go deep
 - **Polish is part of the job, not an extra.** Assume your UI has mistakes you haven't seen yet, and do the polish pass in `done.md` until you find none.
 - **Core loop first.** Get the main action feeling right before adding systems.
 - **Check your own work before reporting** (see `done.md`). The user should never have to point out basics. Keep the check proportionate: minutes, not hours.
+- **Use subagents for independent work:** research, separate systems, assets, and fresh-eyes reviews. Only one agent drives Studio at a time (see `subagents.md`).
 - **Add admin commands** that jump straight to any state, so you can test a feature without waiting for it.
 - **When the user thinks out loud or asks a question, discuss it; don't build** until they say so.
 - **When the user names a reference game,** study how it does the thing and match its feel.
@@ -53,3 +54,4 @@ Read this at the start of every session. The other guides in this folder go deep
 | Controls on other devices, performance | `devices.md` |
 | Title, thumbnail, description, trailer | `packaging.md` |
 | Calling a feature done | `done.md` |
+| Splitting work across subagents | `subagents.md` |
