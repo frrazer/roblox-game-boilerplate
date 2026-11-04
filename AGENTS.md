@@ -33,6 +33,17 @@
 
 ## Setup and checks
 
+### When T3 Code manages this game
+
+If `game.json` exists at the root, T3 Code created and manages this game. That takes priority over the manual steps below:
+
+- Setup already ran when the game was created; rerun `./scripts/install.ps1` only after changing `wally.toml`.
+- `game.json` holds the game's Roblox `universeId`, `placeId` and `groupId`. `default.project.json` already lists the place in `servePlaceIds`.
+- T3 runs and restarts the Rojo server for you (on its own port, with Studio's Rojo plugin reconnecting by itself). Never run `rojo serve` yourself.
+- When you need Studio (UI, world building, Play tests), call the `t3_game_open_in_studio` tool, then work through the Roblox Studio MCP. If changes stop reaching Studio, call `t3_game_sync_status`.
+
+### Manual setup
+
 Tools are pinned in `aftman.toml`: Rojo, Wally, StyLua, wally-package-types and luau-lsp. The only prerequisite is [Aftman](https://github.com/LPGhatguy/aftman).
 
 ```powershell
@@ -172,6 +183,7 @@ return ShopService
 **Build UI in Studio, not in code.** Prefer ScreenGuis authored in StarterGui, with code finding and driving them. Only create UI in code (`Instance.new`, React or similar) if the user says they prefer that.
 
 - Use the Roblox Studio MCP tools to create and edit UI in StarterGui: inspect the existing tree, add ScreenGuis and elements, and take screenshots to check the result.
+- If Studio is not open and T3 Code manages the game (`game.json` exists), call `t3_game_open_in_studio` first and wait for the Studio MCP to list the place.
 - If no Roblox Studio MCP is connected, do not fall back to building UI in code. Tell the user to set it up using https://create.roblox.com/docs/studio/mcp, and continue with the code side (the screen module) meanwhile.
 - UI in StarterGui is saved in the place file, not on disk; Rojo does not sync it. Remind the user to save the place after UI changes.
 
