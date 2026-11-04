@@ -46,7 +46,7 @@ If `game.json` exists at the root, T3 Code created and manages this game. That t
 - T3 runs and restarts the Rojo server for you (on its own port, with Studio's Rojo plugin reconnecting by itself). Never run `rojo serve` yourself.
 - When you need Studio (UI, world building, Play tests), call the `t3_game_open_in_studio` tool, then work through the Roblox Studio MCP. If changes stop reaching Studio, call `t3_game_sync_status`.
 - When you have finished your Studio work, call `t3_game_close_studio`. Team Create has already saved your edits.
-- Assets: `t3_game_upload_assets` uploads images and 3D models to the game's owner and returns asset IDs (reusing anything already uploaded, recorded in `uploads.json`). `t3_game_import_model` uploads a model file and inserts it into the open Studio. `t3_game_render_html` renders HTML to a transparent PNG, for UI concepts and UI art.
+- Assets: `t3_game_upload_assets` uploads images and 3D models to the game's owner and returns asset IDs (reusing anything already uploaded, recorded in `uploads.json`). To bring a 3D model into the place, use the Studio MCP `rbx-import-asset` skill (keep the file inside this repo; Studio already has full permissions for it). `t3_game_render_html` renders HTML to a transparent PNG, for UI concepts and UI art.
 - UI: `t3_game_check_ui` finds mechanical UI mistakes in the open Studio (stretched images, mismatched rounding, clipped text and more). Run it after every UI change and fix what it reports.
 
 ### Manual setup

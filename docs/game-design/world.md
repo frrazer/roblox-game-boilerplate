@@ -18,7 +18,7 @@
 - **Interactions never break the world.**
 - **Keep one art style.** Use no free models that clash with it, and only assets we're allowed to use.
 - **Custom characters look native to Roblox.**
-- **Detailed 3D models** (characters, props, vehicles) are made outside Studio, in Blender or as generated meshes, and brought in with `t3_game_import_model`. Check the size it reports and fix the scale.
+- **Detailed 3D models** (characters, props, vehicles) are made outside Studio, in Blender or as generated meshes, and brought in with the Studio MCP `rbx-import-asset` skill, which checks scale, orientation, textures and placement.
 - **Hand-built models stay in Studio,** outside Rojo, so syncing can't overwrite them.
 
 ## Lighting
