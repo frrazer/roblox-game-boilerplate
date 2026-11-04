@@ -1,5 +1,9 @@
 # Game Boilerplate — agent instructions
 
+## Making the game
+
+This file covers how to write the code. What makes the game *good* is in [docs/game-design](docs/game-design/core.md): read `core.md` at the start of every session, and the topic guide it points to before you build that part.
+
 ## Code style
 
 - Do not add comments to code. Luau directives such as `--!strict` are allowed.
