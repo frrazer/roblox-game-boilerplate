@@ -41,6 +41,7 @@ If `game.json` exists at the root, T3 Code created and manages this game. That t
 - `game.json` holds the game's Roblox `universeId`, `placeId` and `groupId`. `default.project.json` already lists the place in `servePlaceIds`.
 - T3 runs and restarts the Rojo server for you (on its own port, with Studio's Rojo plugin reconnecting by itself). Never run `rojo serve` yourself.
 - When you need Studio (UI, world building, Play tests), call the `t3_game_open_in_studio` tool, then work through the Roblox Studio MCP. If changes stop reaching Studio, call `t3_game_sync_status`.
+- When you have finished your Studio work, call `t3_game_close_studio`. Team Create has already saved your edits.
 
 ### Manual setup
 
