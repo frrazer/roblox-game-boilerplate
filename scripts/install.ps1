@@ -10,6 +10,8 @@ try {
             $fresh = "$($_.FullName).fresh"
             Copy-Item -LiteralPath $_.FullName -Destination $fresh
             Move-Item -LiteralPath $fresh -Destination $_.FullName -Force
+            # Keep it writable, or the next Aftman install can't replace it.
+            & chmod u+w $_.FullName
         }
     }
     if (-not (Test-Path -LiteralPath globalTypes.d.luau)) {
