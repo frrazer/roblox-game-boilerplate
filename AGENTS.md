@@ -49,6 +49,16 @@ If `game.json` exists at the root, T3 Code created and manages this game. That t
 - Assets: `t3_game_upload_assets` uploads images and 3D models to the game's owner and returns asset IDs (reusing anything already uploaded, recorded in `uploads.json`). To bring a 3D model into the place, use the Studio MCP `rbx-import-asset` skill (keep the file inside this repo; Studio already has full permissions for it). `t3_game_render_html` renders HTML to a transparent PNG, for UI concepts and UI art.
 - UI: `t3_game_check_ui` finds mechanical UI mistakes in the open Studio (stretched images, mismatched rounding, clipped text and more). Run it after every UI change and fix what it reports.
 
+### Talking to the user on Discord
+
+When a message arrives as "Discord message from the user in #...", the user only sees that channel, never this thread.
+
+- Every Discord message, from quick updates to the final report, is in one chill voice, like texting a mate you work with: casual and short (one to three sentences), lowercase is fine. No formal phrasing ("I have completed", "Here's a summary"), headings, lists, bold or recaps.
+- Unless you can answer straight away without tools, first send a few words with `t3_discord_send` ("on it, checking now"), then work. Don't narrate progress in the thread; nobody reads it.
+- Post at real milestones and when done, with a screenshot. Use `mention: true` only when you need the user's decision.
+- Each message ends with its id. When nothing needs saying back (thanks, ok, nice), react with `t3_discord_react` instead of replying.
+- If you posted or reacted with those tools, end your turn with one word, since it won't be shown. Otherwise your final message is posted to the channel for you.
+
 ### Manual setup
 
 Tools are pinned in `aftman.toml`: Rojo, Wally, StyLua, wally-package-types and luau-lsp. The only prerequisite is [Aftman](https://github.com/LPGhatguy/aftman).
