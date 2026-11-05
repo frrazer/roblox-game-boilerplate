@@ -3,6 +3,15 @@ Push-Location (Split-Path $PSScriptRoot -Parent)
 try {
     & aftman install
     if ($LASTEXITCODE -ne 0) { throw 'Aftman install failed' }
+    if ($IsMacOS) {
+        # Aftman rewrites its tool launchers in place, and macOS then kills them on
+        # launch (exit 137). Replacing each with a fresh copy gives it a new file.
+        Get-ChildItem (Join-Path $HOME '.aftman/bin') -File | ForEach-Object {
+            $fresh = "$($_.FullName).fresh"
+            Copy-Item -LiteralPath $_.FullName -Destination $fresh
+            Move-Item -LiteralPath $fresh -Destination $_.FullName -Force
+        }
+    }
     if (-not (Test-Path -LiteralPath globalTypes.d.luau)) {
         Invoke-WebRequest 'https://raw.githubusercontent.com/JohnnyMorganz/luau-lsp/main/scripts/globalTypes.d.luau' -OutFile globalTypes.d.luau
     }
