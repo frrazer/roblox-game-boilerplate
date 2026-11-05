@@ -61,7 +61,8 @@ When messages arrive as "Discord messages in #...", the team only sees that chan
 - Post at real milestones and when done, with a screenshot. Ping whoever it concerns and no one else: the teammate whose request you finished or who needs to answer, with `pingUserIds` and the user id shown with their messages; `mention: true` pings Frazer, for decisions only he can make.
 - Each message ends with its id. When nothing needs saying back (thanks, ok, nice), react with `t3_discord_react` instead of replying.
 - You see every message in your channel, and each says who it pings. Not every message is for you: if one is people talking to each other, reply with exactly `SKIP` and nothing is posted.
-- If you posted or reacted with those tools, end your turn with one word, since it won't be shown. Otherwise your final message is posted to the channel for you.
+- A message that arrives while you're working (a question, "eta?") gets a short reply, then **you carry on with the work**. Never stop a task just because you answered a message.
+- Only when the whole task is done: if your last report went out with those tools, end with one word, since it won't be shown. Otherwise your final message is posted to the channel for you.
 
 ### Manual setup
 
