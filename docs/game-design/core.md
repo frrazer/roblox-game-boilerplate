@@ -1,56 +1,48 @@
 # Making a good Roblox game
 
-Read this at the start of every session. The other guides in this folder go deeper. Before you build something, read the guide for it.
+Read this at the start of every session. It distils a study of 16 successful Roblox games. The guides in this folder hold the detail, real numbers and examples; before you build something, read the one for it.
 
 ## Who you're making it for
 
-- Most players are 7 to 10 years old, on cheap phones and tablets, with a good share on console. They don't read, and they decide whether to stay within the first minute.
-- Test every idea with one question: **would a 7-year-old get this without reading?** If something needs text to explain it, the design is too complicated. Simplify the design; don't add instructions.
+- Most players are young, on phones, and decide within the first minute. They don't read. If something needs explaining in text, change the design.
+- **Fun beats correct.** A game that works but isn't fun has failed. "It runs" doesn't mean it's done.
 
-## The bar
+## What the best games all do
 
-- **Fun beats correct.** A build that does what was asked but is boring has failed.
-- **It must not look AI-made.** Compare your work with top front-page Roblox games, not with your own idea of good.
-- **Small scope, high polish.** A small game that looks and feels great beats a big, messy one. Simple scales, fancy fails.
-- **Do it properly.** Don't take a shortcut that removes the fun (replacing an interaction with a button) or fakes quality (a text label standing in for an effect or an icon).
-
-## Rules that apply everywhere
-
-1. **Fantasy first.** The game sells one clear fantasy. Every system feeds the core loop; cut anything that doesn't.
-2. **Every system is visible.** If players can't see what something does, it doesn't exist for them.
-3. **Every action gets feedback,** and every reward appears on screen.
-4. **No dead time,** least of all in the first minute.
-5. **Mobile and console first.**
-6. **Use what players already know.** Follow Roblox conventions, and use built-in Roblox features before building custom ones.
-7. **Things behave the way players expect** from real life and from other games.
-8. **Kid-friendly.**
-9. **One consistent art style,** using only assets we're allowed to use.
+1. **A one-line fantasy, with the verb in the title.** The power you gain shows on the avatar or in the world, not just in a counter.
+2. **A core verb that's fun with the numbers hidden.** Every action gets sound, motion and a reaction from the world. Add a short, bounded skill or decision moment inside the loop.
+3. **One number (or one rule) drives everything.** Show it against the requirement at every gate, in green or red. Every side system feeds it. Failure names the number to raise and offers a free fix and a paid fix.
+4. **The map is the progress bar.** The next goal is visible from spawn. Going further is harder and pays more.
+5. **Rewards are events, not numbers.** They fly to their counter, and the counter waits for them to land. Celebrations scale with how rare the event is, and big reveals build up before they burst.
+6. **The first minute is rigged and quiet.** The first reward is guaranteed within 60 seconds and nothing can go wrong. Each tutorial step is one action, shown in the world. Nothing is sold until a few minutes after the tutorial.
+7. **Offers come at the moment of pain or payoff,** sized to the player's own progress, with a free path beside every paid one.
+8. **Other players can see your progress,** and playing with friends makes you stronger.
+9. **One theme across everything:** world, items, sounds and UI.
+10. **UI is one design system in code,** with one recipe for every button and panel. Colour means the same thing everywhere, and motion is spent on rewards.
 
 ## How to work
 
-- **Plan before building.** Keep `GAME.md` up to date (see `designing.md`). Before a new system, describe step by step what the player does.
-- **Show UI concepts before building any UI.** No exceptions (see `ui.md`).
-- **Polish is part of the job, not an extra.** Assume your UI has mistakes you haven't seen yet, and do the polish pass in `done.md` until you find none.
-- **Core loop first.** Get the main action feeling right before adding systems.
-- **Check your own work before reporting** (see `done.md`). The user should never have to point out basics. Keep the check proportionate: minutes, not hours.
-- **Use subagents for independent work:** research, separate systems, assets, and fresh-eyes reviews. Only one agent drives Studio at a time (see `subagents.md`).
-- **Add admin commands** that jump straight to any state, so you can test a feature without waiting for it.
+- **Plan before building.** Follow `designing.md`, write `GAME.md`, and send the user a short overview. Wait for their OK.
+- **Show UI concepts before building any UI** (`ui.md`).
+- **Get the core verb feeling right before adding systems.**
+- **Check your own work before reporting** (`done.md`). Polish is part of the job.
+- **Use subagents for independent work** (`subagents.md`). Only one agent drives Studio at a time.
+- **Add admin commands** that jump straight to any state, so you can test anything quickly.
 - **When the user thinks out loud or asks a question, discuss it; don't build** until they say so.
-- **When the user names a reference game,** study how it does the thing and match its feel.
 - **Never silently drop features.**
-- **Don't fake assets you can't make well.** Leave a clean empty slot and ask the user for exactly what you need.
+- **Don't fake assets you can't make well.** Ask for them.
 
 ## Guides
 
 | Read before you work on | Guide |
 | --- | --- |
-| The game's concept, or any new system | `designing.md` |
-| The first-time experience | `onboarding.md` |
-| Any UI | `ui.md` |
-| Animation, effects, sound, game feel | `feel.md` |
-| The map, builds, lighting, NPCs | `world.md` |
-| Progression and balance | `progression.md` |
+| The concept, the loop, any new system | `designing.md` |
+| The first minute and the tutorial | `onboarding.md` |
+| Stats, currencies, curves, rebirth, retention | `progression.md` |
 | Anything sold for Robux | `monetisation.md` |
+| Feedback, juice, celebrations, reveals, sound | `feel.md` |
+| The map, plots, shops and information in the world | `world.md` |
+| Any UI | `ui.md` |
 | Controls on other devices, performance | `devices.md` |
 | Title, thumbnail, description, trailer | `packaging.md` |
 | Calling a feature done | `done.md` |
