@@ -48,7 +48,7 @@ Build the layers in this order, bottom to top. The values are where the games ag
 1. **Lip.** A frame in the base colour darkened to 0.6–0.66 (Depth uses face×0.66, Backseat C×0.62, DONT SPLASH mixes 45% toward black), showing 4–7 px below the face. It reads as the side of a physical block. You can also use a hard `UIShadow` with blur 0, offset 5–10 px, in a dark tint (Spider Arm).
 2. **Face fill.** A vertical `UIGradient` (Rotation 90): lighter at the top, base in the middle, darker at the bottom. Formula: top = base lerped 28% to white, bottom = base lerped 22% to black (Spider Arm `Kit.block`). The cheaper form, used widely, is a white BackgroundColor tinted by a white→grey gradient (`#FFFFFF → #A5A5A5–#D7D7D7`), so one gradient shades any colour (DONT SPLASH, Depth, Sushi, Backseat). Never ship a flat fill in the toy family.
 3. **Texture.** A tiled image (`ScaleType.Tile`, ~40–56 px tile) at 0.62–0.82 transparency, clipped by the same UICorner. Studs, wood, paper, stripes or checker, matched to the world.
-4. **Gloss.** A white strip over the top 38–45% of the face at 0.72–0.78 transparency, or a thin 3–4 px shine line 5 px from the top. Optionally add a diagonal glint: 2–3 white bars at ~20° in a CanvasGroup (Break and Steal, Steal and Drive, Throw Food).
+4. **Gloss.** A white strip over the top 38–45% of the face at 0.72–0.78 transparency, or a thin 3–4 px shine line 5 px from the top. Optionally add a diagonal glint: 2–3 white bars at ~20°, clipped by the face (`ClipsDescendants`), never a CanvasGroup, which is slow and blurry on mobile (Break and Steal, Steal and Drive, Throw Food).
 5. **Double outline.** An outer dark stroke in the ink colour, plus an inner light rim (white at 0.55–0.8 transparency, or the fill lerped 60% to white). This "sticker edge" appears in 8 games. Break and Steal derives both strokes from the fill: inner = lerp 60% to white, outer = lerp 60% to black. If you can't use two UIStrokes on one instance, put the outer stroke on a `Rim` frame 8 px larger (DONT SPLASH).
 6. **Label.** White heavy text with an ink stroke, inset in the face. Put an icon on the left at about 1.1–1.3× the button height so it **overflows** the edge, tilted −8° to −12°.
 
@@ -85,7 +85,7 @@ end
 
 **Title text.** Draw a duplicate label in the ink colour offset ~5% down behind the white title, for a solid extruded shadow (Break and Steal, Mini War, Steal an Egg). Big numbers get a gradient fill: gold `#FFF896→#FFD628→#FF9614` for rewards, or chrome white with a grey band at 0.46–0.76 (Speed Keyboard).
 
-**Fonts.** Fredoka One is the default (8 games). Add Luckiest Guy or GothamSSm Black/Heavy for display numbers and titles. Restrained themes use Montserrat + BuilderSans (Bug Evolution), Gotham Heavy Italic (Backseat) or Roboto Condensed (Criminal Sim). Use at most two families, plus at most one expressive accent font for the single most important button (Criminal Sim's Permanent Marker PLAY). Give money its own face or style so the eye finds it (Sushi uses HighwayGothic gold; Steal an Egg uses italic Heavy). Use `TextScaled` plus a `UITextSizeConstraint` max on everything.
+**Fonts.** Fredoka One is the default (8 games). Add Luckiest Guy or GothamSSm Black/Heavy for display numbers and titles. Restrained themes use Montserrat + BuilderSans (Bug Evolution), Gotham Heavy Italic (Backseat) or Roboto Condensed (Criminal Sim). Use at most two families, plus at most one expressive accent font for the single most important button (Criminal Sim's Permanent Marker PLAY). Give money its own face or style so the eye finds it (Sushi uses HighwayGothic gold; Steal an Egg uses italic Heavy). Use fixed `TextSize`s from a short list in the theme module, and let one UIScale on the root scale everything. Avoid `TextScaled`: it fills the glyph atlas and makes text flicker on low-end phones (the UI checker flags it), even though many of the studied games use it.
 
 **Images.** Use chunky, glossy, 3D-rendered or outlined cartoon icons, and **live ViewportFrames** for anything that exists as a model: pets, cars, items, trainers (Bug Evolution, Scare, Backseat, Sushi, Throw Food, Criminal). Auto-frame the camera from the bounding box at FOV 26–40, with a slow yaw swing. Show undiscovered items as black silhouettes of the real model, not a padlock. Put a sunburst/ray image at ~0.6 transparency and 1.5× icon size behind every hero icon. 9-slice is optional: only 3 games use it. Gradients, strokes and tiles do the work.
 
@@ -211,7 +211,7 @@ Use Back Out for appearing, Quad or Quart In for leaving, Elastic for one dramat
 - [ ] Every stroke uses ScaledSize or a viewport stroke scaler. One ink colour throughout.
 - [ ] No flat fills in the toy family: a gradient on every surface, plus a gloss or texture.
 - [ ] Icons overflow their buttons and pills, and title icons break out of headers.
-- [ ] All text is stroked, with TextScaled plus a max size. Nothing under ~11 px on a phone.
+- [ ] All text is stroked, at fixed sizes from the theme (no TextScaled). Nothing under ~11 px on a phone.
 - [ ] Every button has hover, press and a sound, applied globally.
 - [ ] One menu open at a time. Blur, dim and FOV behind it. Close is faster than open.
 - [ ] Counters never snap. They count up, and gains fly in from their source.
