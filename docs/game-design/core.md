@@ -22,6 +22,7 @@ Read this at the start of every session. It distils a study of 16 successful Rob
 
 ## How to work
 
+- **GAME.md's build checklist is the to-do list.** Tick each box (`- [x]`) when it's built and checked, and commit. When every box is ticked, post "ready for your review" with screenshots, tell Margot, and end your turn with WAITING; Frazer's feedback becomes new boxes.
 - **Plan before building.** Arthur, the game designer, follows `designing.md`, writes `GAME.md` and sends Frazer a short overview; nothing gets built until Frazer OKs it. (If you're Otis, ask Arthur with `t3_team_message`; don't write the design yourself.)
 - **Show UI concepts before building any UI** (`ui.md`).
 - **Get the core verb feeling right before adding systems.**

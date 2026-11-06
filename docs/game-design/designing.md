@@ -76,6 +76,10 @@ Recipe:
 - **Put the whole server on shared clocks:** a 5-min night reset with a 3-2-1 wall [Steal An Egg], a Craft Fair every 30 min [My Small Business], hourly quests seeded so every server gets the same three [Bug Evolution].
 - **Where games disagree.** Mandatory co-op dies in empty servers, and optional co-op with no reward is ignored. Make it optional and rewarded. Small servers (5 players [Throw Food]) keep every plot visible; larger ones suit PvP and conquest maps.
 
+## GAME.md ends with the build checklist
+
+GAME.md's last section is `## Build checklist`: one `- [ ]` line per thing to build for the first full version (each system, each screen, each piece of content), followed by every line of `done.md`. It's the team's to-do list and the definition of "ready for Frazer's review": Otis ticks a box (`- [x]`) when it's built and checked, and T3 keeps the team working while any box is unticked. Make each box concrete and checkable ("Shop sells 8 gum flavours from a data table", not "Shop"). When Frazer gives feedback, add new boxes for it.
+
 ## Why games work: checklist
 
 Before building, check the design against each line:
