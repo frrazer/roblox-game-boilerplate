@@ -22,7 +22,7 @@ Read this at the start of every session. It distils a study of 16 successful Rob
 
 ## How to work
 
-- **Plan before building.** Follow `designing.md`, write `GAME.md`, and send the user a short overview. Wait for their OK.
+- **Plan before building.** Arthur, the game designer, follows `designing.md`, writes `GAME.md` and sends Frazer a short overview; nothing gets built until Frazer OKs it. (If you're Otis, ask Arthur with `t3_team_message`; don't write the design yourself.)
 - **Show UI concepts before building any UI** (`ui.md`).
 - **Get the core verb feeling right before adding systems.**
 - **Check your own work before reporting** (`done.md`). Polish is part of the job.
