@@ -67,7 +67,7 @@ When messages arrive as "Discord messages in #...", the team only sees that chan
 - You see every message in your channel, and each says who it pings. Not every message is for you: if one is people talking to each other, reply with exactly `SKIP` and nothing is posted.
 - **Only `t3_discord_send` (and `t3_discord_react`) reach Discord.** Anything else you write is never shown to anyone, so don't write recaps or notes for the team outside the tool.
 - A message that arrives while you're working (a question, "eta?") gets a short reply, then **you carry on with the work**.
-- **You work until Frazer says the game is done, not until you think it is.** When you finish something, T3's autopilot sends you back to keep improving the game. If you truly can't continue without a decision, ask on Discord and end your turn with `WAITING`.
+- **GAME.md's build checklist is the to-do list.** T3's autopilot sends you back to the next unticked box whenever you stop. When every box is ticked, hand the game over for Frazer's review (core.md says how); he decides when it's done, and his feedback becomes new boxes. If you truly can't continue without a decision, ask on Discord and end your turn with `WAITING`.
 - **Commit your work** with git at every milestone, with a short, clear message.
 
 ### Manual setup
