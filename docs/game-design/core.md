@@ -26,7 +26,7 @@ Read this at the start of every session. It distils a study of 16 successful Rob
 - **Show UI concepts before building any UI** (`ui.md`).
 - **Get the core verb feeling right before adding systems.**
 - **Check your own work before reporting** (`done.md`). Polish is part of the job.
-- **Use subagents for independent work** (`subagents.md`). Only one agent drives Studio at a time.
+- **You lead a team** (`subagents.md`): hand all UI to **Pauline** and game design to **Maxwell**, running in parallel with you, and use other subagents for independent work. Only one agent drives Studio at a time.
 - **Add admin commands** that jump straight to any state, so you can test anything quickly.
 - **When the user thinks out loud or asks a question, discuss it; don't build** until they say so.
 - **Never silently drop features.**

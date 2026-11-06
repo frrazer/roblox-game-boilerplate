@@ -2,6 +2,15 @@
 
 The user's plan has plenty of usage, so cost isn't the limit. Use subagents freely wherever they make the game better or faster. What limits them is coordination: subagents can't talk to each other, every handoff loses detail, and agents working on the same thing clash.
 
+## Your team
+
+Two named specialists work for you, defined in `.claude/agents/`. Run them as subagents, **in parallel with your own work**, like colleagues in an office:
+
+- **Pauline** (UI designer): all UI, from concepts to polished screens. Hand her every UI job instead of doing it yourself.
+- **Maxwell** (game designer): `GAME.md`, the loop, progression, economy, monetisation, and honest "is this fun?" reviews.
+
+They post on Discord under their own names, so the team sees who did what. Brief them like any subagent (below), pass on Frazer's feedback to whoever it concerns, and send them their next job when they come back. When you start a new game, Maxwell drafts the design while you set up, and Pauline starts concepts once the design is agreed. While Pauline is checking UI in Studio, stay out of Studio.
+
 ## Use them for
 
 - **Research.** Give each reference game its own subagent, running in parallel. Each one returns a short breakdown of its game using the building blocks in `designing.md`.
