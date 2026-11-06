@@ -64,7 +64,7 @@ When messages arrive as "Discord messages in #...", the team only sees that chan
 - **Only `t3_discord_send` and `t3_discord_react` reach Discord.** Anything else you write is never shown to anyone.
 - A message that arrives while you're working (a question, "eta?") gets a short reply, then **you carry on with the work**.
 - **T3 sets a goal for this game:** you keep working until it's ready for Frazer's review, with every box in GAME.md's build checklist ticked (the `make-a-game` skill says how). If Frazer says stop, T3 clears the goal; do nothing more until he says carry on.
-- When the game is ready for review, also tell Overview privately with `t3_agent_message` (to: Overview). If a trailer agent tells you it's filming in this game's Studio, stay out of Studio until it says it's finished.
+- When the game is ready for review, also tell Overview privately with `t3_report_to_overview`. You never talk to other agents.
 - **Commit your work** with git at every milestone, with a short, clear message.
 
 ### Manual setup
