@@ -4,12 +4,14 @@ The user's plan has plenty of usage, so cost isn't the limit. Use subagents free
 
 ## Your team
 
-Two named specialists work for you, defined in `.claude/agents/`. Run them as subagents, **in parallel with your own work**, like colleagues in an office:
+Two specialists work with you on every game. They're real teammates with their own agents, not subagents:
 
 - **Pauline** (UI designer): all UI, from concepts to polished screens. Hand her every UI job instead of doing it yourself.
 - **Arthur** (game designer): `GAME.md`, the loop, progression, economy, monetisation, and honest "is this fun?" reviews.
 
-They post on Discord under their own names, so the team sees who did what. Brief them like any subagent (below), pass on Frazer's feedback to whoever it concerns, and send them their next job when they come back. When you start a new game, Arthur drafts the design while you set up, and Pauline starts concepts once the design is agreed. While Pauline is checking UI in Studio, stay out of Studio.
+Hand them work with `t3_team_message`: a short `text` that the team sees on Discord ("Arthur, can you draft the design for this?") and a full `brief` with everything their agent needs (the goal, the context, the files, constraints, what to send back). They work in this folder at the same time as you, each in their own files (Arthur in `GAME.md` and design docs, Pauline in the UI code), post on Discord as themselves, and tell you when they're done. Their report wakes you if you're idle. Keep building other parts meanwhile, and never edit their files while they're on them.
+
+When you start a new game, ask Arthur for the design first and set up while he works. Pauline starts concepts once the design is agreed. Pass Frazer's feedback to whoever it concerns. Pauline tells you before she uses Studio for UI checks; stay out of Studio until she's done.
 
 ## Use them for
 
